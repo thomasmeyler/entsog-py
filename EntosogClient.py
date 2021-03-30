@@ -156,7 +156,7 @@ class EntsogRawClient:
             1. operatorKey+pointKey+directionKey
             2. start and end date (YYYY-mm-dd)
             3. indicator = Physical%20Flow
-            4. periodType = day
+            4. periodType = hour
             
         """
 
