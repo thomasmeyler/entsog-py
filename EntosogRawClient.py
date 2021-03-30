@@ -5,7 +5,7 @@ import numpy as np
 
 URL = "https://transparency.entsog.eu/api/v1/"
 
-class EntosogRawClient:
+class EntsogRawClient:
     """
     Client inspired by the enstoe package, used to extract pipe flows of the European gas network.
     This Client pulls in .xml format
