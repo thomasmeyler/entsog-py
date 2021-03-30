@@ -1,13 +1,9 @@
 
 import pandas as pd
 from datetime import datetime, timedelta
-import psycopg2
-from sqlalchemy import create_engine
 import numpy as np
 
-
 URL = "https://transparency.entsog.eu/api/v1/"
-
 
 class EntosogRawClient:
     """
@@ -75,8 +71,6 @@ class EntosogRawClient:
                 + "&to="
                 + endDate
             )
-            # opData = pd.read_csv(opData)
-
             return pd.read_csv(opData)[
                 {
                     "operatorLabel",
@@ -155,9 +149,7 @@ class EntosogRawClient:
                 "directionKey",
             }
         ]
-
-    # https://transparency.entsog.eu/api/v1/operationalData.xlsx?forceDownload=true&pointDirection=es-tso-0006itp-00082entry&from=2020-02-27&to=2020-02-28&indicator=Physical%20Flow&periodType=hour&timezone=CET&limit=-1&dataset=1&directDownload=true
-
+    
     def physicalFlowHour2D(self, directionKey, operatorKey, pointKey):
         """
         Request to the API for the physical flow. key elements:
